@@ -1,0 +1,120 @@
+.main-content {
+    // border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    @include breakpoint-up(medium) {
+        grid-column: 7/11;
+        grid-row: 1/8;
+        display: flex;
+        align-items: center;
+    }
+    .content-wrapper {
+        // border: 1px solid red;
+        margin: auto;
+        padding: 72px 30px;
+        @include breakpoint-up(medium) {
+            padding: 72px 100px;
+        }
+        .title {
+            font-size: 2rem;
+            line-height: 2.3rem;
+        }
+        .content {
+            // border: 1px solid yellow;
+            margin-top: 14px;
+            font-size: 0.9rem;
+            color: #b6b6b6;
+        }
+
+        .call-to-action {
+            // border: 1px solid orange;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 52px;
+            @include breakpoint-up(medium) {
+                width: 75%;
+                height: 100%;
+            }
+            h2 {
+                font-size: 0.9rem;
+                letter-spacing: 0.8rem;
+                text-transform: uppercase;
+            }
+            .arrow {
+                width: 2.75rem;
+            }
+        }
+        .desktop-order {
+            display: none;
+            justify-content: space-between;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 9rem;
+            background-color: black;
+            padding: 1.25rem 1.5rem;
+            @include breakpoint-up(medium) {
+                display: flex;
+            }
+            img {
+                height: 0.95rem;
+                width: 0.8rem;
+            }
+        }
+    }
+}
+.bedroom {
+    // border: 1px solid red;
+    height: 300px;
+    background-image: url(../../images/image-about-dark.jpg);
+    background-position: center;
+    background-size: cover;
+    @include breakpoint-up(medium) {
+        grid-column: 1/4;
+        grid-row: 8/11;
+        height: 100%;
+    }
+}
+.about {
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 45px;
+    @include breakpoint-up(medium) {
+        grid-column: 4/8;
+        grid-row: 8/11;
+        margin: 0;
+    }
+    .about-wrapper {
+        // border: 1px solid orange;
+        margin: auto;
+        padding: 56px 0;
+        .title {
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.25rem;
+        }
+        .content {
+            margin-top: 9px;
+            font-size: 0.9rem;
+            color: #b6b6b6;
+        }
+    }
+}
+.chair {
+    // border: 1px solid yellow;
+    height: 250px;
+    background-image: url(../../images/image-about-light.jpg);
+    background-size: cover;
+    background-position: center;
+    @include breakpoint-up(medium) {
+        grid-column: 8/11;
+        grid-row: 8/11;
+        height: 100%;
+    }
+}

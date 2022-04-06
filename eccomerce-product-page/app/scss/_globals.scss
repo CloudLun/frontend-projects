@@ -1,0 +1,19 @@
+body {
+    @include breakpoint-up(medium) {
+        height: 100%;
+        width: 90%;
+        margin: auto;
+    }
+    main {
+        @include breakpoint-up(medium) {
+            // border: 1px solid green;
+            display: flex;
+            gap: 125px;
+            align-items: center;
+            justify-content: center;
+            padding: 0rem 10rem 0rem 5rem;
+            margin: 180px auto 0;
+            width: 90%;
+        }
+    }
+}

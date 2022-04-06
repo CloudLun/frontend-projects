@@ -1,0 +1,106 @@
+article {
+    // border: 1px solid orange;
+    width: 90%;
+    margin: auto;
+    @include breakpoint-up(medium) {
+        width: 845px;
+    }
+    .title {
+        h2 {
+            font-weight: 700;
+            letter-spacing: 0.1rem;
+            color: $main-color;
+        }
+        h1 {
+            width: 327px;
+            font-size: 28px;
+            font-weight: 700;
+            @include breakpoint-up(medium) {
+                font-size: var(--fs-800);
+            }
+        }
+    }
+    .content {
+        color: gray;
+        @include breakpoint-up(medium) {
+            width: 93%;
+        }
+    }
+    .price-section {
+        align-items: center;
+        justify-content: space-between;
+        @include breakpoint-up(medium) {
+            flex-direction: column;
+            align-items: start;
+            gap: 8px;
+        }
+        .left-section {
+            gap: 19px;
+            p:nth-child(1) {
+                font-weight: 700;
+                letter-spacing: 0.8px;
+            }
+            p:nth-child(2) {
+                text-align: center;
+                font-weight: 700;
+                color: $main-color;
+                border-radius: 20%;
+                background-color: rgba(255, 126, 27, 0.1);
+            }
+        }
+        .right-section p {
+            color: gray;
+            font-weight: 700;
+            opacity: 0.5;
+            text-decoration: line-through;
+        }
+    }
+    .amount-wrapper {
+        // border: 1px solid red;
+        overflow: hidden;
+        @include breakpoint-up(medium) {
+            display: flex;
+            margin-top: 8px;
+            align-items: center;
+            gap: 1rem;
+        }
+        .amount-section {
+            background-color: rgba(232, 236, 241, 0.4);
+            font-weight: 700;
+            @include breakpoint-up(medium) {
+                width: 30%;
+                border-radius: 12px;
+            }
+            .minus {
+                width: 12.5px;
+                height: 4px;
+            }
+            .plus {
+                width: 12.5px;
+                height: 4px;
+            }
+        }
+        .add-to-cart {
+            // border: 1px solid blue;
+            background: $main-color;
+            border-radius: 12px;
+            padding: 16px 0 16px 0;
+            margin: 16px 0 48px;
+            gap: 16px;
+            color: $white;
+            font-weight: 700;
+            box-shadow: 0px 12px 20px 0 rgba(255, 126, 27, 0.3);
+            @include breakpoint-up(medium) {
+                flex-grow: 1;
+                margin: 0;
+            }
+            img {
+                width: 19px;
+                background: $main-color;
+            }
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- custom css -->
+  <link rel="stylesheet" href="./app/scss/style.css">
+  <script src="./app/js/app.js" defer></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container ff-kunbh">
+    <header class="d-flex align-items-center justify-content-between m-a vh-8 wp-90 pb-4">
+      <div class="left-nav d-flex align-items-start">
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"></button>
+        <nav>
+          <ul class="mobile-primary-navigation cursor-pointer" id="primary-navigation" data-visible='false'>
+            <li><a href="">Collections</a></li>
+            <li><a href="">Men</a></li>
+            <li><a href="">Women</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+        <img src="./images/logo.svg" alt="" class="logo ml-4">
+        <div class="nav-line"></div>
+      </div>
+      <ul class="screen-primary-navigation d-flex align-items-center cursor-pointer" id="primary-navigation"
+        data-visible='true'>
+        <li><a href="">Collections</a></li>
+        <li><a href="">Men</a></li>
+        <li><a href="">Women</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+      <div class="right-nav d-flex align-items-center">
+        <div class="nav-cart">
+          <div class="nav-cartNum d-flex justify-content-center align-items-center">3</div>
+          <img src="./images/icon-cart.svg" alt="" class="nav-cart cursor-pointer">
+        </div>
+        <img src="./images/image-avatar.png" alt="" class="avatar cursor-pointer">
+      </div>
+    </header>
+    <main>
+      <div class="hero">
+        <img src="./images/image-product-1.jpg" alt="" class="item-image">
+        <div class="item-gallery">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="" class="cursor-pointer item" id="1">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="" class="cursor-pointer item" id="2">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="" class="cursor-pointer item" id="3">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="" class="cursor-pointer item" id="4">
+        </div>
+        <div class="cart-container d-none m-a mt-3" data-visible="false">
+          <p class="cart-title py-6">Cart</p>
+          <div class="line"></div>
+          <div class="cart-wrapper my-7" data-visible="true">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="" class="item-pic">
+            <div class="cart-content fs-600">
+              <div class="item-name">Autumn Limitied Edition...</div>
+              <div class="item-price">$<span class="priceForOne">125.00</span> x <span
+                  class="cart-num">3</span>&ensp;<span class="total">$375.00</span></div>
+            </div>
+            <img src="./images/icon-delete.svg" alt="" class="item-delete cursor-pointer" id="delete">
+          </div>
+          <div class="empty m-a" id="empty" data-visible="false">
+            Your cart is empty.
+          </div>
+          <div class="checkout cursor-pointer mx-8 mt-2 py-5">Checkout</div>
+        </div>
+        <img class="pre p-3 cursor-pointer" src="./images/icon-previous.svg" alt="">
+        <img class="next p-3 cursor-pointer" src="./images/icon-next.svg" alt="">
+
+      </div>
+      <article>
+        <div class="title">
+          <h2 class="uppercase fs-200 pt-3">Sneaker Company</h2>
+          <h1 class="mt-3">Fall Limitied Edition Sneakers</h1>
+        </div>
+        <p class="content mt-6 fs-200 ">These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="price-section pt-6 pb-7 d-flex">
+          <div class="left-section d-flex align-items-center">
+            <p class="fs-700">$125.00</p>
+            <p class="fs-500 px-2 py-1">50%</p>
+          </div>
+          <div class="right-section">
+            <p class="fs-200">$250.00</p>
+          </div>
+        </div>
+        <div class="amount-wrapper">
+          <div class="amount-section d-flex align-items-center justify-content-between py-4 px-5">
+            <img class="minus cursor-pointer" id='minus' src="./images/icon-minus.svg" alt="">
+            <p class="num">0</p>
+            <img class="plus cursor-pointer" id='plus' src="./images/icon-plus.svg" alt="">
+          </div>
+          <div class="add-to-cart d-flex justify-content-center align-items-center cursor-pointer" id="addToCart">
+            <img src="./images/icon-cart-white.svg" alt="">
+            <p>Add to cart</p>
+          </div>
+        </div>
+
+      </article>
+    </main>
+  </div>
+
+</body>
+
+</html>

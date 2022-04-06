@@ -1,0 +1,9 @@
+.layout {
+    @include breakpoint-up(medium) {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        grid-template-columns: repeat(10, 10%);
+        grid-template-rows: reapet(10 10%);
+    }
+}

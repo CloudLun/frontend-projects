@@ -1,0 +1,260 @@
+$heights: (
+    5: 5vh,
+    10: 10vh,
+    15: 15vh,
+    25: 25vh,
+    50: 50vh,
+    75: 75vh,
+    100: 100vh,
+);
+
+$widths: (
+    5: 5vw,
+    10: 10vw,
+    15: 15vw,
+    25: 25vw,
+    50: 50vw,
+    75: 75vw,
+    100: 100vw,
+);
+
+$sizes: (
+    5: 5%,
+    10: 10%,
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    80: 80%,
+    90: 90%,
+    95: 95%,
+    100: 100%,
+);
+
+@each $prop, $abbrev in (height: vh) {
+    @each $num, $val in $heights {
+        .#{$abbrev}-#{$num} {
+            #{$prop}: $val;
+        }
+    }
+}
+
+@each $prop, $abbrev in (width: vw) {
+    @each $num, $val in $widths {
+        .#{$abbrev}-#{$num} {
+            #{$prop}: $val;
+        }
+    }
+}
+
+@each $prop, $abbrev in (width: wp, height: hp) {
+    @each $num, $val in $sizes {
+        .#{$abbrev}-#{$num} {
+            #{$prop}: $val;
+        }
+    }
+}
+
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: (
+        $spacer * 0.25,
+    ),
+    2: (
+        $spacer * 0.5,
+    ),
+    3: (
+        $spacer * 0.75,
+    ),
+    4: $spacer,
+    5: (
+        $spacer * 1.25,
+    ),
+    6: (
+        $spacer * 1.5,
+    ),
+    7: (
+        $spacer * 1.75,
+    ),
+    8: (
+        $spacer * 2,
+    ),
+);
+
+.m-a {
+    margin: auto;
+}
+
+/* 使用@each 產出css spacer設定 */
+@each $prop, $abbrev in (margin: m, padding: p) {
+    @each $num, $val in $spacers {
+        .#{$abbrev}-#{$num} {
+            #{$prop}: $val;
+        }
+        .#{$abbrev}t-#{$num} {
+            #{$prop}-top: $val;
+        }
+        .#{$abbrev}r-#{$num} {
+            #{$prop}-right: $val;
+        }
+        .#{$abbrev}b-#{$num} {
+            #{$prop}-bottom: $val;
+        }
+        .#{$abbrev}l-#{$num} {
+            #{$prop}-left: $val;
+        }
+        .#{$abbrev}x-#{$num} {
+            #{$prop}-left: $val;
+            #{$prop}-right: $val;
+        }
+        .#{$abbrev}y-#{$num} {
+            #{$prop}-top: $val;
+            #{$prop}-bottom: $val;
+        }
+    }
+}
+
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.d-inline-block {
+    display: inline-blockt;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-start {
+    justify-content: flex-start;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.align-content-start {
+    align-content: flex-start;
+}
+
+.align-content-end {
+    align-content: flex-end;
+}
+
+.align-content-center {
+    align-content: center;
+}
+
+.align-items-start {
+    align-items: flex-start;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+:root {
+    /* font-sizes */
+    --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+    --fs-800: 2.5rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.125rem;
+    --fs-500: 1rem;
+    --fs-400: 0.9375rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+    --fs-100: 0.75rem;
+    /* font-families */
+}
+
+.fs-900 {
+    font-size: var(--fs-900);
+}
+.fs-800 {
+    font-size: var(--fs-800);
+}
+.fs-700 {
+    font-size: var(--fs-700);
+}
+.fs-600 {
+    font-size: var(--fs-600);
+}
+.fs-500 {
+    font-size: var(--fs-500);
+}
+.fs-400 {
+    font-size: var(--fs-400);
+}
+.fs-300 {
+    font-size: var(--fs-300);
+}
+.fs-200 {
+    font-size: var(--fs-200);
+}
+.fs-100 {
+    font-size: var(--fs-100);
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
+}
+
+.ff-kunbh {
+    font-family: "Kumbh Sans";
+}
+.uppercase {
+    text-transform: uppercase;
+}
